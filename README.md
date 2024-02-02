@@ -105,6 +105,8 @@ User=<your username>
 WantedBy=multi-user.target
 ```
 
+Make sure you ` sudo systemctl reload <service-name> ` or ` sudo systemctl daemon-reload ` after saving the file.
+
 &nbsp;
 
 ### Congrats, you are now a Dunder LSP !
