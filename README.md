@@ -99,3 +99,5 @@ It is a good idea to install [Blixt Wallet](https://blixtwallet.github.io/) on y
 
 ### Anything missing ? Suggestions ? Add-ons ?
 Feel free to comment here or get in contact on Telegram [@SatoshiSamourai](https://t.me/SatoshiSamourai) or via email: satoshi_samourai@protonmail.com
+
+#### connect to my Dunder LSP node: add this URL in Blixt   https://lsp.btc-payserver.eu
