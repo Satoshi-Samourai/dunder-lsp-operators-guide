@@ -38,11 +38,10 @@ like this:
 #### There are several ways you can safely expose your node to clearnet:
 1)  Use Caddy or Nginx, if you are familiar with them. This is the easiest way.
 2)  Use Cloudflare (creating an account is easy, but setting the tunnel up in terminal is a bit tricky). For this setup you also need to have ` cloudflared ` installed on your machine.
-4)  ?? Darth ?? any others ?
 
 &nbsp;
 
-Proceed in Terminal with [Hampus Sjöberg's](https://github.com/hsjoberg/dunder-lsp) guide to create a temporary HTTP server. This will present a QR code you have to scan with your wallet of joice, preferable Blixt. Keep in mind that your Dunder LSP server must be stopped for that process. If you use another wallet that other wallet will be irreversable connected to your Dunder LSP server. The only chance you have is to create another admin with another wallet later in your Admin Dashboard. 
+Proceed in Terminal with [Hampus Sjöberg's](https://github.com/hsjoberg/dunder-lsp) guide to create a temporary HTTP server. This will present a QR code you have to scan with your wallet of joice, preferable Blixt. Keep in mind that your Dunder LSP server must be stopped for that process. If you use another wallet, that other wallet will be irreversable connected to your Dunder LSP server. The only chance you have is to create another admin with another wallet later in your Admin Dashboard. 
 
 If you have successfully created your /admin you will be able to access your Dashboard in your browser with ` <yourDomain>/admin ` . A QR code will be crated which you have to scan with the same wallet you used to create the admin (Blixt). I recommend Blixt as it makes sense to be in the same workflow as your Dunder LSP server. Be aware that Brave browser has issues (the generated QR code was unresponsive and it took me a while to figure that out). I had to use Safari on Mac. Chrome works fine, too.
 
