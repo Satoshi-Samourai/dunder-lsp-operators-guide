@@ -68,8 +68,9 @@ This is what you will see after you typed ` <yourDomain>/admin ` into your brows
 At the moment, there is no other way to set your fees than in Terminal. You have to ` cd dunder-lsp/config ` and then ` nano default.json `
 Here is how I have mine set up for now:
 
- ```"minimumPaymentMultiplier": 5,
-  "maximumPaymentSat": 410000,
+ ```
+"minimumPaymentMultiplier": 5,
+  "maximumPaymentSat": 80000,
   "fee": {
     "maxSat": 40000,
     "maxSatPerVByte": 100,
@@ -78,7 +79,31 @@ Here is how I have mine set up for now:
 
 Of course, you can set the channel size and fees as you see fit.
 
-?? Darth ?? HERE SHOULD BE AN EXPLANATION ABOUT HOW TOSE PARAMETERS ARE WORKING. also how to earn some Sats. 
+#### Here is an explanation what the parameters in the ` default.json ` mean:
+
+#### minimumPaymentMultiplier: 5 ####
+
+This parameter sets a rule for the minimum allowed payment amount in a transaction. The minimum payment amount is calculated by multiplying this multiplier with some base value. For example, if the base value is 10,000 satoshis, then the minimum payment amount would be 5 times that, which is 50,000 satoshis.
+
+#### maximumPaymentSat: 80,000 ####
+
+This parameter establishes the maximum amount of satoshis that can be sent in a single payment or transaction (in this case 80,000 Stats). If a user attempts to send more than this specified amount, the transaction may be rejected or adjusted to comply with this limit. If a user wants to have a 400,000 Sats channel opened, he needs to send the maximum amount of 80,000 Sats to do so. This basically means that channels are restricted to a maximum size of 400,000 Sats each from the Dunder LSP server side.  
+
+&nbsp;
+
+### Fees: ###
+
+#### maxSat: 40,000 ####
+
+This sets the maximum allowable transaction fee in satoshis. Users creating transactions are restricted from setting a fee higher than this value.
+
+#### maxSatPerVByte: 100 ####
+
+This parameter sets the maximum fee rate per virtual byte in satoshis. Transaction fees are often calculated based on the size (in virtual bytes) of the transaction. This parameter imposes an upper limit on the fee rate.
+
+#### subsidyFactor: 1 ####
+
+The subsidy factor may be related to how transaction fees are subsidized, especially in the context of mining rewards. A subsidy factor of 1 might imply that transaction fees are not subsidized (i.e., not multiplied or adjusted by a factor) and are considered as is.
 
 &nbsp;
 
