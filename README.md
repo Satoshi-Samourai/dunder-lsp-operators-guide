@@ -103,7 +103,7 @@ This parameter sets the maximum fee rate per virtual byte in satoshis. Transacti
 
 #### subsidyFactor: 1 ####
 
-The subsidy factor may be related to how transaction fees are subsidized, especially in the context of mining rewards. A subsidy factor of 1 might imply that transaction fees are not subsidized (i.e., not multiplied or adjusted by a factor) and are considered as is.
+The subsidy factor is related to how transaction fees are subsidized. The subsidy factor of 1 sets that the on-chain fees are paid by the channel opening peer (user) and not the Dunder LSP server.
 
 &nbsp;
 
