@@ -99,7 +99,7 @@ This sets the maximum allowable transaction fee in satoshis. Users creating tran
 
 #### maxSatPerVByte: 100 ####
 
-This parameter sets the maximum fee rate per virtual byte in satoshis. Transaction fees are often calculated based on the size (in virtual bytes) of the transaction. This parameter imposes an upper limit on the fee rate.
+This parameter sets the maximum fee rate per virtual byte in satoshis. Transaction fees are calculated based on the size (in virtual bytes) of the transaction. This parameter imposes an upper limit on the fee rate.
 
 #### subsidyFactor: 1 ####
 
