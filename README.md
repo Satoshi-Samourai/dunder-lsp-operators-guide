@@ -106,6 +106,11 @@ The subsidy factor is related to how transaction fees are subsidized. The subsid
 
 &nbsp;
 
+#### Safety feature ####  (can this be called so ?)
+If mempool fees exceed ??/vB, Dunder LSP server will automatically shut down .... BECAUSE ?? 
+
+&nbsp;
+
 ### Keep your Dunder LSP Server running
 It is absolutely necessary to keep your Dunder LSP server up and running at any time if you want to provide a reliable service for other Lightning Network users. Create a ` systemd ` ` dunder.service ` file to do so:
 
