@@ -106,7 +106,8 @@ The subsidy factor is related to how transaction fees are subsidized. The subsid
 
 &nbsp;
 
-#### Safety feature ####  (can this be called so ?)
+#### Safety feature for extremely high fee rate emvironments ####  
+(can this be called so ?)
 If mempool fees exceed ??/vB, Dunder LSP server will automatically shut down .... BECAUSE ?? 
 
 &nbsp;
