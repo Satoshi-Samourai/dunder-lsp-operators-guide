@@ -5,7 +5,7 @@ If you are a LND node runner and want to commit to scaling the Lightning Network
 &nbsp;
 
 ### There are four points to keep in mind: 
-1) Dunder LSP works only for LND nodes in combination with [Blixt Wallet](https://blixtwallet.github.io/) at the moment.
+1) Dunder LSP works only for LND nodes in combination with [Blixt Wallet](https://blixtwallet.github.io/) at the moment. Dunder LSP channels are private.
 2) You have to have some solid knowledge of how to use Terminal and Linux, as well as IP networks and proxy servers.
 3) I am far from being a developer, so this guide is built solely on my experience while setting up my own Dunder LSP Server https://lsp.btc-payserver.eu (no need to go there, dunder lsp servers do not have websites)
 4) I link to guides from experienced Bitcoiners and developers I used myself. But still -> do your own research.
@@ -112,8 +112,12 @@ If mempool fees exceed 200/vB (as set in ` default.json ` ), Dunder LSP server w
 
 &nbsp;
 
-### What actually happens when a user requests a channel from your Dunder LSP ###
-Let's say a user wants a channel with a total capacity of 400.000 Sats. He pays 80,000 Sats to request the channel from your Dunder LSP node. Your Dunder LSP server opens a 400,000 Sats channel and "borrows" the user the additional amount of 320.000 Sats (minimumPaymentMultiplier: 5). Then your Dunder LSP server uses ` push-amt ` (push amount) and pushes 80.000 Sats (minus the on-chain fees for channel opening) to the users side. Now he has a channel to you with about 80.000 Sats outbound liquidity and 320.000 Sats inbound liquidity.   (PLEASE, CORRECT AND SET THE RIGHT NUMBERS)
+### What actually happens when a user requests a channel from your Dunder LSP ? ###
+
+There are currently two ways a user can onboard to Blixt wallet. 
+1)  The user simply pays an on-chain amount of his choice (min. 22.000 Sats) and automatically gets a Lightning Network channel opened with outbound liquidity for the same amount (minus on-chain fees). This method currently works only through the Blixt node by default and has nothing to do with any Dunder server.
+
+2)  A user, who already has LN liquidity can open a channel with your Dunder LSP server by selecting your server in the settings (default is: https//dunder.blixtwallet.com). He then creates an invoice with his Blixt wallet. No matter the amount a user creates an invoice for, your Dunder LSP server opens a channel with the max. amount you chose in the ` default.json ` (in my case 400,000 Sats) and "borrows" the user the additional amount. Then your Dunder LSP server uses ` push-amt ` (push amount) and pushes the initial channel opening amount (minus the on-chain fees for channel opening) to the users side. Now the user has a private channel to you with outbound and inbound liquidity. These channels are not visible to other nodes in the Lightning network. You are routing these "Dunder" payments through your public channels. That is why you have to be well connected with good routing nodes.
 
 #### HERE SHOULD BE AN EXPLANATION HOW TO EARN SOME SATS FOR THAT SERVICE ####
 
